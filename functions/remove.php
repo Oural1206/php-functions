@@ -4,7 +4,7 @@ function remove($path) {
     if (is_dir($path)) {
         foreach (scandir($path) as $element) {
             if ($element != "." && $element != "..") {
-                remove(getPath([$path, $element]));
+                remove("$path/$element");
             }
         }
         rmdir($path);
