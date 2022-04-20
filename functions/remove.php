@@ -1,5 +1,4 @@
 <?php
-
 function remove($path) {
     if (is_dir($path)) {
         foreach (scandir($path) as $element) {
@@ -12,5 +11,4 @@ function remove($path) {
         unlink($path);
     }
 }
-
 ?>
